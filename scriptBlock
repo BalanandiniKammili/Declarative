@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('Custom Script') {
+            steps {
+                script {
+                    def myVar = 'Hello'
+                    echo "Custom Groovy script: $myVar"
+                }
+            }
+        }
+    }
+}
