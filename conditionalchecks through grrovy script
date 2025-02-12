@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage('Check Version') {
+            steps {
+                script {
+                    def version = '1.0.0'
+                    if (version == '1.0.0') {
+                        echo 'Version is 1.0.0, proceeding with deployment.'
+                    } else {
+                        echo 'Different version, aborting.'
+                        currentBuild.result = 'FAILURE'
+                    }
+                }
+            }
+        }
+    }
+}
