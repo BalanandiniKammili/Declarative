@@ -1,13 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            when {
-                branch 'main'
-}
+        stage('Example Build') {
             steps {
-                echo 'This will run only on the main branch'
+                echo 'Hello World'
             }
         }
-}
+        stage('Example Deploy') {
+            when {
+                branch 'main'
+            }
+                echo 'Deploying'
+            }
+        }
+    }
 }
