@@ -4,18 +4,11 @@ pipeline {
         stage('Build') {
             when {
                 branch 'main'
+}
             steps {
                 echo 'This will run only on the main branch'
             }
         }
-}
-stage('Test'){
-when{
-branch 'first'
-steps{
-echo 'This is will run in master branch only'
-}
-}
 }
 }
 }
