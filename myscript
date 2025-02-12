@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    environment {
+        MY_VAR = '123'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo "MY_VAR is: ${env.MY_VAR}"
+            }
+        }
+    }
+}
+
