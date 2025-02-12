@@ -10,6 +10,7 @@ pipeline {
             when {
                 branch 'main'
             }
+               steps {
                 echo 'Deploying'
             }
         }
